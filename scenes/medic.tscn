@@ -1,5 +1,6 @@
-[gd_scene format=3 uid="uid://bnhem0apn73i5"]
+[gd_scene format=3 uid="uid://dxn8xufwtoagb"]
 
+[ext_resource type="Script" uid="uid://k7lmp6np8afx" path="res://scenes/medic.gd" id="1_e7bui"]
 [ext_resource type="Texture2D" uid="uid://chaaiysu4cr3n" path="res://assets/sprites/medic_idle.png" id="1_oshxw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e7bui"]
@@ -35,6 +36,7 @@ animations = [{
 radius = 6.0
 
 [node name="medic" type="CharacterBody2D" unique_id=1988546085]
+script = ExtResource("1_e7bui")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1734805438]
 position = Vector2(0, -8)
