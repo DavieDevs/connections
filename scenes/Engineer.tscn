@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://cno55pi3mue77"]
+
+[ext_resource type="Texture2D" uid="uid://dy08525bvvwvm" path="res://assets/sprites/Engineer_walk.png" id="1_8ff0u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ff0u"]
+atlas = ExtResource("1_8ff0u")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p23is"]
+atlas = ExtResource("1_8ff0u")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lp0ke"]
+atlas = ExtResource("1_8ff0u")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_majtb"]
+atlas = ExtResource("1_8ff0u")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75uxv"]
+atlas = ExtResource("1_8ff0u")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocrl3"]
+atlas = ExtResource("1_8ff0u")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pjhm"]
+atlas = ExtResource("1_8ff0u")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdexl"]
+atlas = ExtResource("1_8ff0u")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dy1gs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ff0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p23is")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lp0ke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_majtb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75uxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocrl3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pjhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdexl")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ff0u"]
+size = Vector2(36, 118)
+
+[node name="Engineer" type="CharacterBody2D" unique_id=249967083]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=801658085]
+position = Vector2(1, -65)
+sprite_frames = SubResource("SpriteFrames_dy1gs")
+animation = &"Walk"
+autoplay = "Walk"
+frame = 7
+frame_progress = 0.76734895
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1308422062]
+position = Vector2(3, -61)
+shape = SubResource("RectangleShape2D_8ff0u")
