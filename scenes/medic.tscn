@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dxn8xufwtoagb"]
+
+[node name="medic" type="CharacterBody2D" unique_id=1988546085]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1734805438]
