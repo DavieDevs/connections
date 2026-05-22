@@ -1,5 +1,48 @@
-[gd_scene format=3 uid="uid://dxn8xufwtoagb"]
+[gd_scene format=3 uid="uid://bnhem0apn73i5"]
+
+[ext_resource type="Texture2D" uid="uid://chaaiysu4cr3n" path="res://assets/sprites/medic_idle.png" id="1_oshxw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7bui"]
+atlas = ExtResource("1_oshxw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7esj"]
+atlas = ExtResource("1_oshxw")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15qa1"]
+atlas = ExtResource("1_oshxw")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ngly"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7bui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7esj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15qa1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lt3pk"]
+radius = 6.0
 
 [node name="medic" type="CharacterBody2D" unique_id=1988546085]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1734805438]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_1ngly")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.3187703
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1579596842]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_lt3pk")

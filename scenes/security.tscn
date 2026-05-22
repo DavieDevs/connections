@@ -1,71 +1,8 @@
 [gd_scene format=3 uid="uid://boixlf1qjqch2"]
 
-[ext_resource type="Texture2D" uid="uid://4hu215rspntk" path="res://assets/sprites/Security_Idle.png" id="1_417ia"]
 [ext_resource type="Script" uid="uid://bwp2lrwlj3q5e" path="res://scripts/security.gd" id="1_bg5n2"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bg5n2"]
-atlas = ExtResource("1_417ia")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d8tyo"]
-atlas = ExtResource("1_417ia")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iv35m"]
-atlas = ExtResource("1_417ia")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6d64a"]
-atlas = ExtResource("1_417ia")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mx355"]
-atlas = ExtResource("1_417ia")
-region = Rect2(64, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g2ggn"]
-atlas = ExtResource("1_417ia")
-region = Rect2(80, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_20hls"]
-atlas = ExtResource("1_417ia")
-region = Rect2(96, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wlcuk"]
-atlas = ExtResource("1_417ia")
-region = Rect2(112, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_wbo5p"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bg5n2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d8tyo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iv35m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6d64a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mx355")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g2ggn")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_20hls")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wlcuk")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 10.0
-}]
+[sub_resource type="SpriteFrames" id="SpriteFrames_417ia"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_417ia"]
 size = Vector2(4, 14.500064)
@@ -76,11 +13,7 @@ script = ExtResource("1_bg5n2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=855108867]
 position = Vector2(0.022803562, -7.9999676)
-sprite_frames = SubResource("SpriteFrames_wbo5p")
-animation = &"idle"
-autoplay = "idle"
-frame = 6
-frame_progress = 0.52884316
+sprite_frames = SubResource("SpriteFrames_417ia")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=845574965]
 position = Vector2(0.020633744, -7.25)

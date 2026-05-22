@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cweiamfr1afhs"]
 
+[ext_resource type="PackedScene" uid="uid://bnhem0apn73i5" path="res://scenes/medic.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://boixlf1qjqch2" path="res://scenes/security.tscn" id="2_yqjtg"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
@@ -20,3 +21,6 @@ rotation = -0.002850449
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=902142685]
 position = Vector2(-0.01425227, 4.9999948)
 shape = SubResource("WorldBoundaryShape2D_uwrxv")
+
+[node name="medic" parent="." unique_id=1988546085 instance=ExtResource("2_lnu2h")]
+position = Vector2(66, 241)
