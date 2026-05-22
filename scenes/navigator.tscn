@@ -1,7 +1,31 @@
-[gd_scene format=3 uid="uid://bd0lqf7r2y6t1"]
+[gd_scene format=3 uid="uid://dgfel4j510s27"]
+
+[ext_resource type="Texture2D" uid="uid://ce4gqy8kxd1b" path="res://assets/sprites/navigator_simple.png" id="1_m88ny"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yl27y"]
+atlas = ExtResource("1_m88ny")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fj3xs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yl27y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rh283"]
+radius = 45.01111
 
 [node name="navigator" type="CharacterBody2D" unique_id=1497388994]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2142010914]
+position = Vector2(0, -64)
+sprite_frames = SubResource("SpriteFrames_fj3xs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=654455762]
+position = Vector2(-1, -44)
+shape = SubResource("CircleShape2D_rh283")
